@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B864EA93-FFEF-4A2A-8DF3-E7A018BD981C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CITITO</RootNamespace>
+    <AssemblyName>CITITO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CITITO-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>690E71DCD33E1EB1BB4271CE6759AEB8D8B18587</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CITITO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.93.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.93.1\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.8.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.8.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.3.0\lib\net45\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.5.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutCITITO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutCITITO.Designer.cs">
+      <DependentUpon>AboutCITITO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessControls\ControlsHash.cs" />
+    <Compile Include="BusinessControls\ServerTime.cs" />
+    <Compile Include="BusinessObjects\CITITOVersion.cs" />
+    <Compile Include="BusinessObjects\PTR_QA_StdRates.cs" />
+    <Compile Include="BusinessObjects\IDLEDetail.cs" />
+    <Compile Include="BusinessObjects\IDLEHeader.cs" />
+    <Compile Include="BusinessObjects\IDLEReason.cs" />
+    <Compile Include="BusinessObjects\ManagerDetail.cs" />
+    <Compile Include="BusinessObjects\PCPDetail.cs" />
+    <Compile Include="BusinessObjects\PCPHeader.cs" />
+    <Compile Include="BusinessObjects\PICDetail.cs" />
+    <Compile Include="BusinessObjects\PICHeader.cs" />
+    <Compile Include="BusinessObjects\ProcessCodeHeader.cs" />
+    <Compile Include="BusinessObjects\ProjectDetail.cs" />
+    <Compile Include="BusinessObjects\ResourceCode.cs" />
+    <Compile Include="BusinessObjects\SystemAccessLevel.cs" />
+    <Compile Include="BusinessObjects\TaskDetail.cs" />
+    <Compile Include="BusinessObjects\TaskHeader.cs" />
+    <Compile Include="BusinessObjects\ManagerHeader.cs" />
+    <Compile Include="BusinessObjects\TaskRecordDetail.cs" />
+    <Compile Include="BusinessObjects\TaskRecordDetailModify.cs" />
+    <Compile Include="BusinessObjects\TaskRecordHeader.cs" />
+    <Compile Include="BusinessObjects\TaskRecordHeaderModify.cs" />
+    <Compile Include="BusinessObjects\UOMList.cs" />
+    <Compile Include="BusinessObjects\UserManagementDetail.cs" />
+    <Compile Include="BusinessObjects\UserManagementHeader.cs" />
+    <Compile Include="BusinessServices\CITITOVersionMng.cs" />
+    <Compile Include="BusinessServices\IDLEDetailMng.cs" />
+    <Compile Include="BusinessServices\IDLEHeaderMng.cs" />
+    <Compile Include="BusinessServices\IDLEReasonMng.cs" />
+    <Compile Include="BusinessServices\ManagerDetailMng.cs" />
+    <Compile Include="BusinessServices\ManagerHeaderMng.cs" />
+    <Compile Include="BusinessServices\PCPDetailMng.cs" />
+    <Compile Include="BusinessServices\PCPHeaderMng.cs" />
+    <Compile Include="BusinessServices\PICDetailMng.cs" />
+    <Compile Include="BusinessServices\PICHeaderMng.cs" />
+    <Compile Include="BusinessServices\ProcessCodeHeaderMng.cs" />
+    <Compile Include="BusinessServices\ProjectDetailMng.cs" />
+    <Compile Include="BusinessServices\PTR_QA_StdRatesMng.cs" />
+    <Compile Include="BusinessServices\ResourceCodeMng.cs" />
+    <Compile Include="BusinessServices\SystemAccessLevelMng.cs" />
+    <Compile Include="BusinessServices\TaskDetailMng.cs" />
+    <Compile Include="BusinessServices\TaskHeaderMng.cs" />
+    <Compile Include="BusinessServices\TaskRecordDetailMng.cs" />
+    <Compile Include="BusinessServices\TaskRecordDetailModifyMng.cs" />
+    <Compile Include="BusinessServices\TaskRecordHeaderMng.cs" />
+    <Compile Include="BusinessServices\TaskRecordHeaderModifyMng.cs" />
+    <Compile Include="BusinessServices\UOMListMng.cs" />
+    <Compile Include="BusinessServices\UserManagementDetailMng.cs" />
+    <Compile Include="BusinessServices\UserManagementHeaderMng.cs" />
+    <Compile Include="frm-Dashboard_RecordsForViewIDLEAndWastage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewIDLEAndWastage.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewIDLEAndWastage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewResourceID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewResourceID.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewResourceID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewTask.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadFresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadFresh.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadFresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadHold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadHold.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadPCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadPCP.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadPCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadPending.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ApprovalTaskInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ApprovalTaskInOut.Designer.cs">
+      <DependentUpon>frm_ApprovalTaskInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssignManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssignManager.Designer.cs">
+      <DependentUpon>frm_AssignManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssignPIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssignPIC.Designer.cs">
+      <DependentUpon>frm_AssignPIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssignPICToProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssignPICToProject.Designer.cs">
+      <DependentUpon>frm_AssignPICToProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssignUsersToManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssignUsersToManager.Designer.cs">
+      <DependentUpon>frm_AssignUsersToManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssignUsersToProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssignUsersToProject.Designer.cs">
+      <DependentUpon>frm_AssignUsersToProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BulkImport_PCPCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BulkImport_PCPCodes.designer.cs">
+      <DependentUpon>frm_BulkImport_PCPCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BulkImport_PTRCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BulkImport_PTRCodes.Designer.cs">
+      <DependentUpon>frm_BulkImport_PTRCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BulkImport_Quota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BulkImport_Quota.Designer.cs">
+      <DependentUpon>frm_BulkImport_Quota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BulkImport_UserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BulkImport_UserRegistration.Designer.cs">
+      <DependentUpon>frm_BulkImport_UserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadDone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm-Dashboard_RecordsForViewWorkLoadDone.Designer.cs">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DCD.Designer.cs">
+      <DependentUpon>frm_DCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DeleteUsersFromProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DeleteUsersFromProject.Designer.cs">
+      <DependentUpon>frm_DeleteUsersFromProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DoneByteSizeFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DoneByteSizeFile.Designer.cs">
+      <DependentUpon>frm_DoneByteSizeFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistBulkPCPMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistBulkPCPMessage.designer.cs">
+      <DependentUpon>frm_ExistBulkPCPMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistBulkPTRCodesMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistBulkPTRCodesMessage.Designer.cs">
+      <DependentUpon>frm_ExistBulkPTRCodesMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistBulkQuotaMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistBulkQuotaMessage.Designer.cs">
+      <DependentUpon>frm_ExistBulkQuotaMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistBulkUserRegisterMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistBulkUserRegisterMessage.Designer.cs">
+      <DependentUpon>frm_ExistBulkUserRegisterMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistDisapprovalMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistDisapprovalMessage.Designer.cs">
+      <DependentUpon>frm_ExistDisapprovalMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExistHoldReleaseMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExistHoldReleaseMessage.Designer.cs">
+      <DependentUpon>frm_ExistHoldReleaseMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_IDLEApprovalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_IDLEApprovalHistory.Designer.cs">
+      <DependentUpon>frm_IDLEApprovalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_IDLETask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_IDLETask.Designer.cs">
+      <DependentUpon>frm_IDLETask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_IDLETaskApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_IDLETaskApproval.Designer.cs">
+      <DependentUpon>frm_IDLETaskApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Loading.Designer.cs">
+      <DependentUpon>frm_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MainForm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainForm_Admin.designer.cs">
+      <DependentUpon>frm_MainForm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MainForm_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainForm_Manager.Designer.cs">
+      <DependentUpon>frm_MainForm_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MainReportDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainReportDashboard.Designer.cs">
+      <DependentUpon>frm_MainReportDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MainReportDashboard_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainReportDashboard_Manager.Designer.cs">
+      <DependentUpon>frm_MainReportDashboard_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ManagerModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManagerModify.Designer.cs">
+      <DependentUpon>frm_ManagerModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ManagerRegisterPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ManagerRegisterPanel.designer.cs">
+      <DependentUpon>frm_ManagerRegisterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ModifyFileSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ModifyFileSize.Designer.cs">
+      <DependentUpon>frm_ModifyFileSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ModifyPTRResourceCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ModifyPTRResourceCost.Designer.cs">
+      <DependentUpon>frm_ModifyPTRResourceCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PCPDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PCPDelete.designer.cs">
+      <DependentUpon>frm_PCPDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProjectModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProjectModify.designer.cs">
+      <DependentUpon>frm_ProjectModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProjectRegisterPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProjectRegisterPanel.designer.cs">
+      <DependentUpon>frm_ProjectRegisterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MainForm_PIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainForm_PIC.designer.cs">
+      <DependentUpon>frm_MainForm_PIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PICModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PICModify.Designer.cs">
+      <DependentUpon>frm_PICModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PICRegisterPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PICRegisterPanel.Designer.cs">
+      <DependentUpon>frm_PICRegisterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ProjectRegistrationPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ProjectRegistrationPanel.Designer.cs">
+      <DependentUpon>frm_ProjectRegistrationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ResetPassword.Designer.cs">
+      <DependentUpon>frm_ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ResourceCostTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ResourceCostTable.Designer.cs">
+      <DependentUpon>frm_ResourceCostTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboard1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboard1.Designer.cs">
+      <DependentUpon>frm_SubDashboard1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboard1_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboard1_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboard1_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardAllUserIDLEWastage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardAllUserIDLEWastage.Designer.cs">
+      <DependentUpon>frm_SubDashboardAllUserIDLEWastage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardAllUserIDLEWastage_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardAllUserIDLEWastage_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardAllUserIDLEWastage_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardCost.Designer.cs">
+      <DependentUpon>frm_SubDashboardCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardProjects.Designer.cs">
+      <DependentUpon>frm_SubDashboardProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardPTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardPTR.Designer.cs">
+      <DependentUpon>frm_SubDashboardPTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardTeamDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardTeamDetails.Designer.cs">
+      <DependentUpon>frm_SubDashboardTeamDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardTeamDetails_Managers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardTeamDetails_Managers.Designer.cs">
+      <DependentUpon>frm_SubDashboardTeamDetails_Managers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Project.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Project_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Project_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Project_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Task.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Task_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Task_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Task_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Team.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Team_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3Performance_Team_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Team_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3UserProjectwiseDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardViewAllX3UserProjectwiseDataSet_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWastage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWastage.Designer.cs">
+      <DependentUpon>frm_SubDashboardWastage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWastage_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWastage_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardWastage_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoadDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoadDataSet.Designer.cs">
+      <DependentUpon>frm_SubDashboardWorkLoadDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoadDataSet_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoadDataSet_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardWorkLoadDataSet_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoad_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoad_Summary.Designer.cs">
+      <DependentUpon>frm_SubDashboardWorkLoad_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoad_Summary_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardWorkLoad_Summary_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardWorkLoad_Summary_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByProject.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByProject_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByProject_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByProject_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTask.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTask_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTask_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByTask_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTeam.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTeam_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3ByTeam_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3ByTeam_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3Performance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3Performance.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3Performance_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3Performance_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3Performance_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3UserProjectWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3UserProjectWise.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3UserProjectWise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3UserProjectWise_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboardX3UserProjectWise_Manager.Designer.cs">
+      <DependentUpon>frm_SubDashboardX3UserProjectWise_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboard_AllTaskAndQuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboard_AllTaskAndQuota.Designer.cs">
+      <DependentUpon>frm_SubDashboard_AllTaskAndQuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SubDashboard_TaskAndQuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SubDashboard_TaskAndQuota.Designer.cs">
+      <DependentUpon>frm_SubDashboard_TaskAndQuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskCodeList_DCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskCodeList_DCD.Designer.cs">
+      <DependentUpon>frm_TaskCodeList_DCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskCodeRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskCodeRegister.Designer.cs">
+      <DependentUpon>frm_TaskCodeRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskCodeModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskCodeModify.Designer.cs">
+      <DependentUpon>frm_TaskCodeModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOut.Designer.cs">
+      <DependentUpon>frm_TaskInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutApprovalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutApprovalHistory.Designer.cs">
+      <DependentUpon>frm_TaskInOutApprovalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutFileSizeModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutFileSizeModify.Designer.cs">
+      <DependentUpon>frm_TaskInOutFileSizeModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutModifiedApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutModifiedApproval.Designer.cs">
+      <DependentUpon>frm_TaskInOutModifiedApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutModifiedApprovalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutModifiedApprovalHistory.Designer.cs">
+      <DependentUpon>frm_TaskInOutModifiedApprovalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutPending.Designer.cs">
+      <DependentUpon>frm_TaskInOutPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutTimeModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutTimeModify.Designer.cs">
+      <DependentUpon>frm_TaskInOutTimeModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutX3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutX3.Designer.cs">
+      <DependentUpon>frm_TaskInOutX3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tempForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tempForm.Designer.cs">
+      <DependentUpon>frm_tempForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserAssignDeleteFromProjectPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserAssignDeleteFromProjectPanel.Designer.cs">
+      <DependentUpon>frm_UserAssignDeleteFromProjectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserManagementPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserManagementPanel.Designer.cs">
+      <DependentUpon>frm_UserManagementPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserModifyByManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserModifyByManager.Designer.cs">
+      <DependentUpon>frm_UserModifyByManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserModifyByPIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserModifyByPIC.Designer.cs">
+      <DependentUpon>frm_UserModifyByPIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserRegistrationPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserRegistrationPanel.Designer.cs">
+      <DependentUpon>frm_UserRegistrationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_UserTaskInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_UserTaskInOut.Designer.cs">
+      <DependentUpon>frm_UserTaskInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaskInOutApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaskInOutApproval.Designer.cs">
+      <DependentUpon>frm_TaskInOutApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutCITITO.resx">
+      <DependentUpon>AboutCITITO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewIDLEAndWastage.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewIDLEAndWastage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewResourceID.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewResourceID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewTask.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewWorkLoadFresh.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadFresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewWorkLoadHold.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewWorkLoadPCP.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadPCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewWorkLoadPending.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ApprovalTaskInOut.resx">
+      <DependentUpon>frm_ApprovalTaskInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssignManager.resx">
+      <DependentUpon>frm_AssignManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssignPIC.resx">
+      <DependentUpon>frm_AssignPIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssignPICToProject.resx">
+      <DependentUpon>frm_AssignPICToProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssignUsersToManager.resx">
+      <DependentUpon>frm_AssignUsersToManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssignUsersToProject.resx">
+      <DependentUpon>frm_AssignUsersToProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BulkImport_PCPCodes.resx">
+      <DependentUpon>frm_BulkImport_PCPCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BulkImport_PTRCodes.resx">
+      <DependentUpon>frm_BulkImport_PTRCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BulkImport_Quota.resx">
+      <DependentUpon>frm_BulkImport_Quota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BulkImport_UserRegistration.resx">
+      <DependentUpon>frm_BulkImport_UserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm-Dashboard_RecordsForViewWorkLoadDone.resx">
+      <DependentUpon>frm-Dashboard_RecordsForViewWorkLoadDone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DCD.resx">
+      <DependentUpon>frm_DCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DeleteUsersFromProject.resx">
+      <DependentUpon>frm_DeleteUsersFromProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DoneByteSizeFile.resx">
+      <DependentUpon>frm_DoneByteSizeFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistBulkPCPMessage.resx">
+      <DependentUpon>frm_ExistBulkPCPMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistBulkPTRCodesMessage.resx">
+      <DependentUpon>frm_ExistBulkPTRCodesMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistBulkQuotaMessage.resx">
+      <DependentUpon>frm_ExistBulkQuotaMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistBulkUserRegisterMessage.resx">
+      <DependentUpon>frm_ExistBulkUserRegisterMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistDisapprovalMessage.resx">
+      <DependentUpon>frm_ExistDisapprovalMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExistHoldReleaseMessage.resx">
+      <DependentUpon>frm_ExistHoldReleaseMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_IDLEApprovalHistory.resx">
+      <DependentUpon>frm_IDLEApprovalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_IDLETask.resx">
+      <DependentUpon>frm_IDLETask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_IDLETaskApproval.resx">
+      <DependentUpon>frm_IDLETaskApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Loading.resx">
+      <DependentUpon>frm_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MainForm_Admin.resx">
+      <DependentUpon>frm_MainForm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MainForm_Manager.resx">
+      <DependentUpon>frm_MainForm_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MainReportDashboard.resx">
+      <DependentUpon>frm_MainReportDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MainReportDashboard_Manager.resx">
+      <DependentUpon>frm_MainReportDashboard_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManagerModify.resx">
+      <DependentUpon>frm_ManagerModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ManagerRegisterPanel.resx">
+      <DependentUpon>frm_ManagerRegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ModifyFileSize.resx">
+      <DependentUpon>frm_ModifyFileSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ModifyPTRResourceCost.resx">
+      <DependentUpon>frm_ModifyPTRResourceCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PCPDelete.resx">
+      <DependentUpon>frm_PCPDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProjectModify.resx">
+      <DependentUpon>frm_ProjectModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProjectRegisterPanel.resx">
+      <DependentUpon>frm_ProjectRegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MainForm_PIC.resx">
+      <DependentUpon>frm_MainForm_PIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PICModify.resx">
+      <DependentUpon>frm_PICModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PICRegisterPanel.resx">
+      <DependentUpon>frm_PICRegisterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ProjectRegistrationPanel.resx">
+      <DependentUpon>frm_ProjectRegistrationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ResetPassword.resx">
+      <DependentUpon>frm_ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ResourceCostTable.resx">
+      <DependentUpon>frm_ResourceCostTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboard1.resx">
+      <DependentUpon>frm_SubDashboard1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboard1_Manager.resx">
+      <DependentUpon>frm_SubDashboard1_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardAllUserIDLEWastage.resx">
+      <DependentUpon>frm_SubDashboardAllUserIDLEWastage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardAllUserIDLEWastage_Manager.resx">
+      <DependentUpon>frm_SubDashboardAllUserIDLEWastage_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardCost.resx">
+      <DependentUpon>frm_SubDashboardCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardProjects.resx">
+      <DependentUpon>frm_SubDashboardProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardPTR.resx">
+      <DependentUpon>frm_SubDashboardPTR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardTeamDetails.resx">
+      <DependentUpon>frm_SubDashboardTeamDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardTeamDetails_Managers.resx">
+      <DependentUpon>frm_SubDashboardTeamDetails_Managers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Manager.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Project.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Project_Manager.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Project_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Task.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Task_Manager.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Task_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Team.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3Performance_Team_Manager.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3Performance_Team_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3UserProjectwiseDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardViewAllX3UserProjectwiseDataSet_Manager.resx">
+      <DependentUpon>frm_SubDashboardViewAllX3UserProjectwiseDataSet_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWastage.resx">
+      <DependentUpon>frm_SubDashboardWastage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWastage_Manager.resx">
+      <DependentUpon>frm_SubDashboardWastage_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWorkLoadDataSet.resx">
+      <DependentUpon>frm_SubDashboardWorkLoadDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWorkLoadDataSet_Manager.resx">
+      <DependentUpon>frm_SubDashboardWorkLoadDataSet_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWorkLoad_Summary.resx">
+      <DependentUpon>frm_SubDashboardWorkLoad_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardWorkLoad_Summary_Manager.resx">
+      <DependentUpon>frm_SubDashboardWorkLoad_Summary_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByProject.resx">
+      <DependentUpon>frm_SubDashboardX3ByProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByProject_Manager.resx">
+      <DependentUpon>frm_SubDashboardX3ByProject_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByTask.resx">
+      <DependentUpon>frm_SubDashboardX3ByTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByTask_Manager.resx">
+      <DependentUpon>frm_SubDashboardX3ByTask_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByTeam.resx">
+      <DependentUpon>frm_SubDashboardX3ByTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3ByTeam_Manager.resx">
+      <DependentUpon>frm_SubDashboardX3ByTeam_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3Performance.resx">
+      <DependentUpon>frm_SubDashboardX3Performance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3Performance_Manager.resx">
+      <DependentUpon>frm_SubDashboardX3Performance_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3UserProjectWise.resx">
+      <DependentUpon>frm_SubDashboardX3UserProjectWise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboardX3UserProjectWise_Manager.resx">
+      <DependentUpon>frm_SubDashboardX3UserProjectWise_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboard_AllTaskAndQuota.resx">
+      <DependentUpon>frm_SubDashboard_AllTaskAndQuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SubDashboard_TaskAndQuota.resx">
+      <DependentUpon>frm_SubDashboard_TaskAndQuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskCodeList_DCD.resx">
+      <DependentUpon>frm_TaskCodeList_DCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskCodeModify.resx">
+      <DependentUpon>frm_TaskCodeModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskCodeRegister.resx">
+      <DependentUpon>frm_TaskCodeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOut.resx">
+      <DependentUpon>frm_TaskInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutApprovalHistory.resx">
+      <DependentUpon>frm_TaskInOutApprovalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutFileSizeModify.resx">
+      <DependentUpon>frm_TaskInOutFileSizeModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutModifiedApproval.resx">
+      <DependentUpon>frm_TaskInOutModifiedApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutModifiedApprovalHistory.resx">
+      <DependentUpon>frm_TaskInOutModifiedApprovalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutPending.resx">
+      <DependentUpon>frm_TaskInOutPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutTimeModify.resx">
+      <DependentUpon>frm_TaskInOutTimeModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutX3.resx">
+      <DependentUpon>frm_TaskInOutX3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tempForm.resx">
+      <DependentUpon>frm_tempForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserAssignDeleteFromProjectPanel.resx">
+      <DependentUpon>frm_UserAssignDeleteFromProjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserManagementPanel.resx">
+      <DependentUpon>frm_UserManagementPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserModifyByManager.resx">
+      <DependentUpon>frm_UserModifyByManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserModifyByPIC.resx">
+      <DependentUpon>frm_UserModifyByPIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserRegistrationPanel.resx">
+      <DependentUpon>frm_UserRegistrationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_UserTaskInOut.resx">
+      <DependentUpon>frm_UserTaskInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaskInOutApproval.resx">
+      <DependentUpon>frm_TaskInOutApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CITITO_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PIC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CITITO-icon.ico" />
+    <Content Include="CITITO-icon32.ico" />
+    <Content Include="Dario-Arnaez-Genesis-3G-User-Files.ico" />
+    <None Include="Resources\business-color_money-coins.png" />
+    <None Include="Resources\CITITOLoading.gif" />
+    <None Include="Resources\business-color_money-time.png" />
+    <None Include="Resources\business-color_chart.png" />
+    <None Include="Resources\business-color_chart-bar-33.png" />
+    <None Include="Resources\business-color_sign.png" />
+    <None Include="Resources\chart-2.png" />
+    <None Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>

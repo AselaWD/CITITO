@@ -1,0 +1,110 @@
+SELECT 
+	TR_UID AS [UID]
+	,[PCP_Project] AS [PROJECT]
+      ,ROUND(SUM(ISNULL([ACTUAL_WORKED_HOURS],0)),2) AS [WORKED HOURS]
+      ,ROUND(SUM(ISNULL([APPROVED_IDLE],0)),2) AS [APPROVED IDLE]
+      ,ROUND(SUM(ISNULL([SUM_OF_X1],0)),2) AS [X1]
+      ,ISNULL(SUM(ROUND(Y,2)),0) AS [Y]
+      ,ISNULL(ROUND((SUM(SUM_OF_X1)/(SUM(ROUND(Y,2))- ISNULL(SUM([APPROVED_IDLE]),0))) * 100,2),0) AS X3
+FROM 
+(
+	/* Total Task, Output details */
+		SELECT
+			tsk.WORKDATE,
+			tsk.PCP_Project,
+			tsk.TR_UID,
+			tsk.TR_MID,
+			tsk.TR_PIC, 
+			NULL AS ACTUAL_WORKED_HOURS,
+			SUM(tsk.USER_OUTPUT) AS USER_OUTPUT, 
+			SUM(tsk.ACTUAL_OUTPUT) AS ACTUAL_OUTPUT, 
+			NULL AS APPROVED_IDLE, 
+			SUM(tsk.X1) AS SUM_OF_X1, 
+			NULL AS Y
+			--(MAX(tsk.ACTUAL_WORKED_HOURS) * 3600)  AS Y 
+		FROM 
+			tbl_Report_TemptaskDetailsQUOTA_Updated tsk		
+		WHERE 
+			tsk.[LOGIN] IS NOT NULL AND tsk.[LOGOUT] IS NOT NULL AND tsk.WORKDATE BETWEEN '2018-06-01' AND '2018-06-30'  AND tsk.TR_PIC='LR3'
+		GROUP BY 
+			tsk.WORKDATE, 
+			tsk.PCP_Project, 
+			tsk.TR_UID, 		
+			tsk.TR_MID,
+			tsk.TR_PIC
+
+	UNION
+
+	/*Wastage + Project task hours*/
+		SELECT
+			tsk.WORKDATE,
+			tsk.PCP_Project AS IDLE_Project,
+			tsk.TR_UID,
+			tsk.TR_MID,
+			tsk.TR_PIC, 
+			SUM(tsk.WORKED_HOURS)+((SUM(tsk.WORKED_HOURS)/Wastage.SUM_WORKED_HOURS) * Wastage.WASTAGE) AS ACTUAL_WORKED_HOURS, 		
+			NULL AS USER_OUTPUT, 
+			NULL AS ACTUAL_OUTPUT, 
+			NULL AS APPROVED_IDLE,
+			NULL SUM_OF_X1,
+			(SUM(tsk.WORKED_HOURS)+((SUM(tsk.WORKED_HOURS)/Wastage.SUM_WORKED_HOURS) * Wastage.WASTAGE)) *3600 AS Y
+		FROM 
+			tbl_Report_TemptaskDetailsQUOTA_Updated tsk
+			INNER JOIN (
+				SELECT 
+					tsk.WORKDATE,
+					tsk.TR_UID,
+					tsk.TR_MID,
+					tsk.TR_PIC, 
+					MAX(tsk.ACTUAL_WORKED_HOURS) AS ACTUAL_WORKED_HOURS, 
+					SUM(tsk.WORKED_HOURS) AS SUM_WORKED_HOURS,
+					MAX(tsk.ACTUAL_WORKED_HOURS)-SUM(tsk.WORKED_HOURS) AS WASTAGE
+				FROM 
+					tbl_Report_TemptaskDetailsQUOTA_Updated tsk				
+				WHERE 
+					tsk.[LOGIN] IS NOT NULL AND tsk.[LOGOUT] IS NOT NULL AND tsk.WORKDATE BETWEEN '2018-06-01' AND '2018-06-30'  AND tsk.TR_PIC='LR3'
+	
+				GROUP BY 
+					tsk.WORKDATE,
+					tsk.TR_UID,
+					tsk.TR_MID,
+					tsk.TR_PIC
+			) Wastage ON Wastage.WORKDATE=tsk.WORKDATE AND Wastage.TR_UID=tsk.TR_UID
+		WHERE 
+			tsk.[LOGIN] IS NOT NULL AND tsk.[LOGOUT] IS NOT NULL AND tsk.WORKDATE BETWEEN '2018-06-01' AND '2018-06-30'  AND tsk.TR_PIC='LR3'
+	
+		GROUP BY 
+			tsk.WORKDATE,
+			tsk.PCP_Project,
+			tsk.TR_UID,
+			tsk.TR_MID,
+			tsk.TR_PIC,
+			Wastage.SUM_WORKED_HOURS,
+			Wastage.WASTAGE
+
+	UNION
+
+	/* Total IDLEs */
+
+		SELECT 
+			WORKDATE, 
+			IDLE_Project, 
+			IDLE_UID, IDLE_PIC,
+			IDLE_MID,
+			NULL ACTUAL_WORKED_HOURS,
+			NULL USER_OUTPUT,
+			NULL ACTUAL_UOTPUT,
+			SUM(ISNULL(IDLE_TIME,0)) AS APPROVED_IDLE, 
+			NULL SUM_OF_X1,
+			NULL Y
+		FROM tbl_Report_TempidleDetails idle
+		WHERE WORKDATE BETWEEN '2018-06-01' AND '2018-06-30'  AND IDLE_PIC='LR3'
+		GROUP BY 
+			WORKDATE, 
+			IDLE_Project, 
+			IDLE_UID, IDLE_PIC,
+			IDLE_MID
+)UserX3ProjectWise
+
+GROUP BY TR_UID,[PCP_Project]
+ORDER BY TR_UID DESC

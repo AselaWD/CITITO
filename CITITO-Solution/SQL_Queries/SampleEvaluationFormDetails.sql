@@ -1,0 +1,18 @@
+
+SELECT UPPER(right(convert(varchar, [WORKDATE], 106), 8)) As [WORKDATE]
+	  ,[PCP_Project] AS [PROJECT]
+	  ,CONCAT(Task_ID, ' - ', Task_Description) AS [TASK CODE]
+	--,SUM([USER_OUTPUT]) AS [USER OUTPUT]
+    --,SUM([ACTUAL_OUTPUT]) AS [OUTPUT]
+	--,ROUND(SUM([WORKED_HOURS]),2) AS [WORKED HOURS]
+      ,ROUND(SUM([ACTUAL_WORKED_HOURS]),2) AS [WORKED HOURS]
+      ,ROUND(SUM([APPROVED_IDLE]),2) AS [APPROVED IDLE]
+      ,ROUND(SUM([SUM_OF_X1]),2) AS [X1]
+      ,ROUND(SUM([Y]),2) AS [Y]
+      ,ROUND((SUM([SUM_OF_X1])/SUM([Y])) * 100,2) AS [X3]
+	  --,RANK() OVER (ORDER BY ((SUM([SUM_OF_X1])/SUM([Y])) * 100) DESC) AS [RANK]
+FROM tbl_Report_TempDailyX3Task
+WHERE WORKDATE BETWEEN '2018-01-01' AND '2018-06-30' AND TR_PIC='ZDQ' AND TR_UID='5AW'
+GROUP BY [PCP_Project],Task_ID,Task_Description, UPPER(right(convert(varchar, [WORKDATE], 106), 8))
+ORDER BY [WORKDATE] DESC
+

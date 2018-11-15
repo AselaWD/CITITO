@@ -1,0 +1,512 @@
+﻿namespace CITITO
+{
+    partial class frm_TaskInOutModifiedApproval
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TaskInOutModifiedApproval));
+            this.cmbMUID1 = new MetroFramework.Controls.MetroComboBox();
+            this.cmbFileName = new MetroFramework.Controls.MetroTextBox();
+            this.lblMUID = new MetroFramework.Controls.MetroLabel();
+            this.lblPIC = new MetroFramework.Controls.MetroLabel();
+            this.cmbPCPCode = new MetroFramework.Controls.MetroTextBox();
+            this.cmbUserID = new MetroFramework.Controls.MetroTextBox();
+            this.lblTaskIn = new MetroFramework.Controls.MetroLabel();
+            this.btnCheck = new MetroFramework.Controls.MetroButton();
+            this.dateTimePickerTo = new MetroFramework.Controls.MetroDateTime();
+            this.dateTimePickerFrom = new MetroFramework.Controls.MetroDateTime();
+            this.lblTaskOut = new System.Windows.Forms.Label();
+            this.btnHistory = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
+            this.btnDisapprove = new MetroFramework.Controls.MetroButton();
+            this.btnApprove = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.dataGridViewTaskInOutModifiedApproval = new MetroFramework.Controls.MetroGrid();
+            this.btnExit = new MetroFramework.Controls.MetroButton();
+            this.cmbFApproved = new MetroFramework.Controls.MetroComboBox();
+            this.pBoxExportExcel = new System.Windows.Forms.PictureBox();
+            this.pBoxRefersh = new System.Windows.Forms.PictureBox();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTaskInOutModifiedApproval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxExportExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRefersh)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // cmbMUID1
+            // 
+            this.cmbMUID1.FormattingEnabled = true;
+            this.cmbMUID1.ItemHeight = 23;
+            this.cmbMUID1.Location = new System.Drawing.Point(68, 60);
+            this.cmbMUID1.Name = "cmbMUID1";
+            this.cmbMUID1.PromptText = "Manager";
+            this.cmbMUID1.Size = new System.Drawing.Size(89, 29);
+            this.cmbMUID1.TabIndex = 333;
+            this.cmbMUID1.UseSelectable = true;
+            this.cmbMUID1.SelectedIndexChanged += new System.EventHandler(this.cmbMUID1_SelectedIndexChanged);
+            // 
+            // cmbFileName
+            // 
+            // 
+            // 
+            // 
+            this.cmbFileName.CustomButton.Image = null;
+            this.cmbFileName.CustomButton.Location = new System.Drawing.Point(108, 2);
+            this.cmbFileName.CustomButton.Name = "";
+            this.cmbFileName.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.cmbFileName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbFileName.CustomButton.TabIndex = 1;
+            this.cmbFileName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cmbFileName.CustomButton.UseSelectable = true;
+            this.cmbFileName.CustomButton.Visible = false;
+            this.cmbFileName.Lines = new string[0];
+            this.cmbFileName.Location = new System.Drawing.Point(569, 65);
+            this.cmbFileName.MaxLength = 32767;
+            this.cmbFileName.Name = "cmbFileName";
+            this.cmbFileName.PasswordChar = '\0';
+            this.cmbFileName.PromptText = "File Name";
+            this.cmbFileName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cmbFileName.SelectedText = "";
+            this.cmbFileName.SelectionLength = 0;
+            this.cmbFileName.SelectionStart = 0;
+            this.cmbFileName.ShortcutsEnabled = true;
+            this.cmbFileName.Size = new System.Drawing.Size(130, 24);
+            this.cmbFileName.TabIndex = 337;
+            this.cmbFileName.UseSelectable = true;
+            this.cmbFileName.WaterMark = "File Name";
+            this.cmbFileName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbFileName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbFileName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbFileName_KeyUp);
+            // 
+            // lblMUID
+            // 
+            this.lblMUID.AutoSize = true;
+            this.lblMUID.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblMUID.Location = new System.Drawing.Point(428, 19);
+            this.lblMUID.Name = "lblMUID";
+            this.lblMUID.Size = new System.Drawing.Size(36, 15);
+            this.lblMUID.TabIndex = 348;
+            this.lblMUID.Text = "MUID";
+            this.lblMUID.Visible = false;
+            // 
+            // lblPIC
+            // 
+            this.lblPIC.AutoSize = true;
+            this.lblPIC.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblPIC.Location = new System.Drawing.Point(396, 19);
+            this.lblPIC.Name = "lblPIC";
+            this.lblPIC.Size = new System.Drawing.Size(24, 15);
+            this.lblPIC.TabIndex = 347;
+            this.lblPIC.Text = "PIC";
+            this.lblPIC.Visible = false;
+            // 
+            // cmbPCPCode
+            // 
+            // 
+            // 
+            // 
+            this.cmbPCPCode.CustomButton.Image = null;
+            this.cmbPCPCode.CustomButton.Location = new System.Drawing.Point(108, 2);
+            this.cmbPCPCode.CustomButton.Name = "";
+            this.cmbPCPCode.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.cmbPCPCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbPCPCode.CustomButton.TabIndex = 1;
+            this.cmbPCPCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cmbPCPCode.CustomButton.UseSelectable = true;
+            this.cmbPCPCode.CustomButton.Visible = false;
+            this.cmbPCPCode.Lines = new string[0];
+            this.cmbPCPCode.Location = new System.Drawing.Point(419, 65);
+            this.cmbPCPCode.MaxLength = 32767;
+            this.cmbPCPCode.Name = "cmbPCPCode";
+            this.cmbPCPCode.PasswordChar = '\0';
+            this.cmbPCPCode.PromptText = "Job Code";
+            this.cmbPCPCode.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cmbPCPCode.SelectedText = "";
+            this.cmbPCPCode.SelectionLength = 0;
+            this.cmbPCPCode.SelectionStart = 0;
+            this.cmbPCPCode.ShortcutsEnabled = true;
+            this.cmbPCPCode.Size = new System.Drawing.Size(130, 24);
+            this.cmbPCPCode.TabIndex = 336;
+            this.cmbPCPCode.UseSelectable = true;
+            this.cmbPCPCode.WaterMark = "Job Code";
+            this.cmbPCPCode.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbPCPCode.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbPCPCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbPCPCode_KeyUp);
+            // 
+            // cmbUserID
+            // 
+            // 
+            // 
+            // 
+            this.cmbUserID.CustomButton.Image = null;
+            this.cmbUserID.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.cmbUserID.CustomButton.Name = "";
+            this.cmbUserID.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.cmbUserID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbUserID.CustomButton.TabIndex = 1;
+            this.cmbUserID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cmbUserID.CustomButton.UseSelectable = true;
+            this.cmbUserID.CustomButton.Visible = false;
+            this.cmbUserID.Lines = new string[0];
+            this.cmbUserID.Location = new System.Drawing.Point(324, 65);
+            this.cmbUserID.MaxLength = 32767;
+            this.cmbUserID.Name = "cmbUserID";
+            this.cmbUserID.PasswordChar = '\0';
+            this.cmbUserID.PromptText = "User ID";
+            this.cmbUserID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cmbUserID.SelectedText = "";
+            this.cmbUserID.SelectionLength = 0;
+            this.cmbUserID.SelectionStart = 0;
+            this.cmbUserID.ShortcutsEnabled = true;
+            this.cmbUserID.Size = new System.Drawing.Size(75, 24);
+            this.cmbUserID.TabIndex = 335;
+            this.cmbUserID.UseSelectable = true;
+            this.cmbUserID.WaterMark = "User ID";
+            this.cmbUserID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbUserID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbUserID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbUserID_KeyUp);
+            // 
+            // lblTaskIn
+            // 
+            this.lblTaskIn.AutoSize = true;
+            this.lblTaskIn.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblTaskIn.Location = new System.Drawing.Point(737, 69);
+            this.lblTaskIn.Name = "lblTaskIn";
+            this.lblTaskIn.Size = new System.Drawing.Size(69, 15);
+            this.lblTaskIn.TabIndex = 346;
+            this.lblTaskIn.Text = "Date Range:";
+            this.lblTaskIn.UseCustomBackColor = true;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheck.Location = new System.Drawing.Point(1094, 60);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(48, 29);
+            this.btnCheck.TabIndex = 340;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnCheck.UseSelectable = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // dateTimePickerTo
+            // 
+            this.dateTimePickerTo.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTo.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerTo.Location = new System.Drawing.Point(955, 64);
+            this.dateTimePickerTo.MinimumSize = new System.Drawing.Size(0, 25);
+            this.dateTimePickerTo.Name = "dateTimePickerTo";
+            this.dateTimePickerTo.Size = new System.Drawing.Size(119, 25);
+            this.dateTimePickerTo.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dateTimePickerTo.TabIndex = 339;
+            this.dateTimePickerTo.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.dateTimePickerTo.UseCustomBackColor = true;
+            this.dateTimePickerTo.UseCustomForeColor = true;
+            this.dateTimePickerTo.UseStyleColors = true;
+            // 
+            // dateTimePickerFrom
+            // 
+            this.dateTimePickerFrom.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFrom.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(812, 64);
+            this.dateTimePickerFrom.MinimumSize = new System.Drawing.Size(0, 25);
+            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(119, 25);
+            this.dateTimePickerFrom.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dateTimePickerFrom.TabIndex = 338;
+            this.dateTimePickerFrom.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.dateTimePickerFrom.UseCustomBackColor = true;
+            this.dateTimePickerFrom.UseCustomForeColor = true;
+            this.dateTimePickerFrom.UseStyleColors = true;
+            // 
+            // lblTaskOut
+            // 
+            this.lblTaskOut.AutoSize = true;
+            this.lblTaskOut.BackColor = System.Drawing.Color.Transparent;
+            this.lblTaskOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaskOut.ForeColor = System.Drawing.Color.Navy;
+            this.lblTaskOut.Location = new System.Drawing.Point(937, 68);
+            this.lblTaskOut.Name = "lblTaskOut";
+            this.lblTaskOut.Size = new System.Drawing.Size(12, 16);
+            this.lblTaskOut.TabIndex = 345;
+            this.lblTaskOut.Text = "-";
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistory.Location = new System.Drawing.Point(1169, 153);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(102, 36);
+            this.btnHistory.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnHistory.TabIndex = 332;
+            this.btnHistory.Text = "History";
+            this.btnHistory.UseSelectable = true;
+            this.btnHistory.UseStyleColors = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Location = new System.Drawing.Point(1169, 353);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(102, 36);
+            this.btnDelete.TabIndex = 329;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnDisapprove
+            // 
+            this.btnDisapprove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisapprove.Location = new System.Drawing.Point(1169, 267);
+            this.btnDisapprove.Name = "btnDisapprove";
+            this.btnDisapprove.Size = new System.Drawing.Size(102, 36);
+            this.btnDisapprove.TabIndex = 327;
+            this.btnDisapprove.Text = "Disapprove";
+            this.btnDisapprove.UseSelectable = true;
+            this.btnDisapprove.Click += new System.EventHandler(this.btnDisapprove_Click);
+            // 
+            // btnApprove
+            // 
+            this.btnApprove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnApprove.Location = new System.Drawing.Point(1169, 224);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(102, 36);
+            this.btnApprove.TabIndex = 326;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseSelectable = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(1179, 44);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(56, 15);
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroLabel3.TabIndex = 344;
+            this.metroLabel3.Text = "Export As";
+            this.metroLabel3.UseStyleColors = true;
+            // 
+            // dataGridViewTaskInOutModifiedApproval
+            // 
+            this.dataGridViewTaskInOutModifiedApproval.AllowUserToAddRows = false;
+            this.dataGridViewTaskInOutModifiedApproval.AllowUserToDeleteRows = false;
+            this.dataGridViewTaskInOutModifiedApproval.AllowUserToResizeRows = false;
+            this.dataGridViewTaskInOutModifiedApproval.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewTaskInOutModifiedApproval.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewTaskInOutModifiedApproval.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridViewTaskInOutModifiedApproval.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTaskInOutModifiedApproval.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewTaskInOutModifiedApproval.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTaskInOutModifiedApproval.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTaskInOutModifiedApproval.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTaskInOutModifiedApproval.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTaskInOutModifiedApproval.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTaskInOutModifiedApproval.EnableHeadersVisualStyles = false;
+            this.dataGridViewTaskInOutModifiedApproval.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridViewTaskInOutModifiedApproval.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridViewTaskInOutModifiedApproval.Location = new System.Drawing.Point(13, 95);
+            this.dataGridViewTaskInOutModifiedApproval.Name = "dataGridViewTaskInOutModifiedApproval";
+            this.dataGridViewTaskInOutModifiedApproval.ReadOnly = true;
+            this.dataGridViewTaskInOutModifiedApproval.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTaskInOutModifiedApproval.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTaskInOutModifiedApproval.RowHeadersVisible = false;
+            this.dataGridViewTaskInOutModifiedApproval.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewTaskInOutModifiedApproval.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.DimGray;
+            this.dataGridViewTaskInOutModifiedApproval.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            this.dataGridViewTaskInOutModifiedApproval.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTaskInOutModifiedApproval.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewTaskInOutModifiedApproval.Size = new System.Drawing.Size(1142, 605);
+            this.dataGridViewTaskInOutModifiedApproval.Style = MetroFramework.MetroColorStyle.Silver;
+            this.dataGridViewTaskInOutModifiedApproval.TabIndex = 341;
+            this.dataGridViewTaskInOutModifiedApproval.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.dataGridViewTaskInOutModifiedApproval.UseCustomBackColor = true;
+            this.dataGridViewTaskInOutModifiedApproval.UseCustomForeColor = true;
+            this.dataGridViewTaskInOutModifiedApproval.UseStyleColors = true;
+            this.dataGridViewTaskInOutModifiedApproval.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTaskInOutModifiedApproval_CellContentClick);
+            this.dataGridViewTaskInOutModifiedApproval.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewTaskInOutModifiedApproval_CellFormatting);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(1169, 396);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(102, 36);
+            this.btnExit.TabIndex = 330;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseSelectable = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // cmbFApproved
+            // 
+            this.cmbFApproved.FormattingEnabled = true;
+            this.cmbFApproved.ItemHeight = 23;
+            this.cmbFApproved.Items.AddRange(new object[] {
+            "Pending",
+            "Approved",
+            "Disapproved"});
+            this.cmbFApproved.Location = new System.Drawing.Point(172, 60);
+            this.cmbFApproved.Name = "cmbFApproved";
+            this.cmbFApproved.PromptText = "Approval";
+            this.cmbFApproved.Size = new System.Drawing.Size(130, 29);
+            this.cmbFApproved.TabIndex = 352;
+            this.cmbFApproved.UseSelectable = true;
+            this.cmbFApproved.SelectedIndexChanged += new System.EventHandler(this.cmbFApproved_SelectedIndexChanged);
+            // 
+            // pBoxExportExcel
+            // 
+            this.pBoxExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBoxExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("pBoxExportExcel.Image")));
+            this.pBoxExportExcel.Location = new System.Drawing.Point(1197, 62);
+            this.pBoxExportExcel.Name = "pBoxExportExcel";
+            this.pBoxExportExcel.Size = new System.Drawing.Size(38, 27);
+            this.pBoxExportExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxExportExcel.TabIndex = 343;
+            this.pBoxExportExcel.TabStop = false;
+            this.pBoxExportExcel.WaitOnLoad = true;
+            this.pBoxExportExcel.Click += new System.EventHandler(this.pBoxExportExcel_Click);
+            // 
+            // pBoxRefersh
+            // 
+            this.pBoxRefersh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBoxRefersh.Image = ((System.Drawing.Image)(resources.GetObject("pBoxRefersh.Image")));
+            this.pBoxRefersh.Location = new System.Drawing.Point(13, 69);
+            this.pBoxRefersh.Name = "pBoxRefersh";
+            this.pBoxRefersh.Size = new System.Drawing.Size(22, 20);
+            this.pBoxRefersh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxRefersh.TabIndex = 342;
+            this.pBoxRefersh.TabStop = false;
+            this.pBoxRefersh.WaitOnLoad = true;
+            this.pBoxRefersh.Click += new System.EventHandler(this.pBoxRefersh_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Location = new System.Drawing.Point(1169, 310);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(102, 36);
+            this.btnClear.TabIndex = 328;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseSelectable = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // frm_TaskInOutModifiedApproval
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1294, 705);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.cmbFApproved);
+            this.Controls.Add(this.cmbMUID1);
+            this.Controls.Add(this.cmbFileName);
+            this.Controls.Add(this.lblMUID);
+            this.Controls.Add(this.lblPIC);
+            this.Controls.Add(this.cmbPCPCode);
+            this.Controls.Add(this.cmbUserID);
+            this.Controls.Add(this.lblTaskIn);
+            this.Controls.Add(this.btnCheck);
+            this.Controls.Add(this.dateTimePickerTo);
+            this.Controls.Add(this.dateTimePickerFrom);
+            this.Controls.Add(this.lblTaskOut);
+            this.Controls.Add(this.btnHistory);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnDisapprove);
+            this.Controls.Add(this.btnApprove);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.pBoxExportExcel);
+            this.Controls.Add(this.pBoxRefersh);
+            this.Controls.Add(this.dataGridViewTaskInOutModifiedApproval);
+            this.Controls.Add(this.btnExit);
+            this.Movable = false;
+            this.Name = "frm_TaskInOutModifiedApproval";
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Load += new System.EventHandler(this.frm_TaskInOutModifiedApproval_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTaskInOutModifiedApproval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxExportExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxRefersh)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private MetroFramework.Controls.MetroComboBox cmbMUID1;
+        private MetroFramework.Controls.MetroTextBox cmbFileName;
+        private MetroFramework.Controls.MetroLabel lblMUID;
+        private MetroFramework.Controls.MetroLabel lblPIC;
+        private MetroFramework.Controls.MetroTextBox cmbPCPCode;
+        private MetroFramework.Controls.MetroTextBox cmbUserID;
+        private MetroFramework.Controls.MetroLabel lblTaskIn;
+        private MetroFramework.Controls.MetroButton btnCheck;
+        private MetroFramework.Controls.MetroDateTime dateTimePickerTo;
+        private MetroFramework.Controls.MetroDateTime dateTimePickerFrom;
+        private System.Windows.Forms.Label lblTaskOut;
+        private MetroFramework.Controls.MetroButton btnHistory;
+        private MetroFramework.Controls.MetroButton btnDelete;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.PictureBox pBoxExportExcel;
+        private System.Windows.Forms.PictureBox pBoxRefersh;
+        private MetroFramework.Controls.MetroGrid dataGridViewTaskInOutModifiedApproval;
+        private MetroFramework.Controls.MetroButton btnExit;
+        private MetroFramework.Controls.MetroComboBox cmbFApproved;
+        private MetroFramework.Controls.MetroButton btnClear;
+        public MetroFramework.Controls.MetroButton btnDisapprove;
+        public MetroFramework.Controls.MetroButton btnApprove;
+    }
+}

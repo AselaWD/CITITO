@@ -1,0 +1,95 @@
+--SELECT CONVERT(date, t.TR_InDate) AS [WORKDATE], t.TR_UID AS [UID], MIN(t.TR_InDate) AS [F_TASKEDIN], MAX(t.TR_OutDate) AS [L_TASKEDOUT]
+--FROM tbl_TaskRecordDetail t
+--WHERE 
+--(TR_UID='ZAV' OR 
+--TR_UID='JI6' OR 
+--TR_UID='3BF' OR 
+--TR_UID='4BF' OR 
+--TR_UID='0BA' OR 
+--TR_UID='1BB' OR 
+--TR_UID='33R' OR 
+--TR_UID='6BS' OR 
+--TR_UID='1BX' OR 
+--TR_UID='0BY' OR 
+--TR_UID='5BI' OR 
+--TR_UID='2CE' OR 
+--TR_UID='3CI' OR 
+--TR_UID='3CJ' OR 
+--TR_UID='7CJ' OR 
+--TR_UID='7CK' OR 
+--TR_UID='2CM' OR 
+--TR_UID='1CN' OR 
+--TR_UID='2CN' OR 
+--TR_UID='3BR' OR 
+--TR_UID='6BW' OR 
+--TR_UID='7CZ' OR 
+--TR_UID='1DB' OR 
+--TR_UID='2DC' OR 
+--TR_UID='5DC' OR 
+--TR_UID='6DC' OR 
+--TR_UID='0DE' OR 
+--TR_UID='1DE' OR 
+--TR_UID='4DE' OR 
+--TR_UID='5DE' OR 
+--TR_UID='7DE' OR 
+--TR_UID='9DE' OR 
+--TR_UID='5DF' OR 
+--TR_UID='2DG' OR 
+--TR_UID='5DG' OR 
+--TR_UID='0DK' OR 
+--TR_UID='1DK' OR 
+--TR_UID='2DK' OR 
+--TR_UID='0DL' OR 
+--TR_UID='1DL' OR 
+--TR_UID='3DL' OR 
+--TR_UID='6DL' OR 
+--TR_UID='7DL' OR 
+--TR_UID='2DN' OR 
+--TR_UID='3DN' OR 
+--TR_UID='4DN' OR 
+--TR_UID='7DN' OR 
+--TR_UID='0DO' OR 
+--TR_UID='1DO' OR 
+--TR_UID='2DP' OR 
+--TR_UID='4DP' OR 
+--TR_UID='5DP' OR 
+--TR_UID='6DP' OR 
+--TR_UID='7DP' OR 
+--TR_UID='9DP' OR 
+--TR_UID='0DQ' OR 
+--TR_UID='2DQ' OR 
+--TR_UID='3DQ' OR 
+--TR_UID='4DQ' OR 
+--TR_UID='5DQ' OR 
+--TR_UID='6DQ' OR 
+--TR_UID='8DQ' OR 
+--TR_UID='0DR' OR 
+--TR_UID='1DR' OR 
+--TR_UID='7DR' OR 
+--TR_UID='8DR' OR 
+--TR_UID='9DR' OR 
+--TR_UID='1DS' OR 
+--TR_UID='2DS' OR 
+--TR_UID='3DS' OR 
+--TR_UID='5DS' OR 
+--TR_UID='6DS' OR 
+--TR_UID='9DS' OR 
+--TR_UID='0DT' OR 
+--TR_UID='2DT' OR 
+--TR_UID='3DT' OR 
+--TR_UID='4DT' OR 
+--TR_UID='7DT' OR 
+--TR_UID='8DT' OR 
+--TR_UID='9DT' OR 
+--TR_UID='1DU' OR 
+--TR_UID='2DU' OR 
+--TR_UID='3DU' OR 
+--TR_UID='4DU' OR 
+--TR_UID='5DU' OR 
+--TR_UID='6DU' OR 
+--TR_UID='7DU')
+
+
+--AND t.TR_InDate BETWEEN '2018-02-19' AND '2018-02-28'
+--GROUP BY t.TR_UID, CONVERT(date, t.TR_InDate)
+

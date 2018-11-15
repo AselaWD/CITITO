@@ -1,0 +1,8 @@
+SQL instance: VIRCOLSQL21\VIRCOLSQL21
+Database: CITITO
+ConnectionString: Data Source=VIRCOLSQL21\VIRCOLSQL21;Initial Catalog=CITITO;Integrated Security=True
+
+
+SQL instance: VIRCOLSQL21\VIRCOLSQL21
+Database: CITITO
+ConnectionString: Data Source=VIRCOLSQL21\VIRCOLSQL21;Initial Catalog=CITITO;User ID=CITITO_SUSER;Password=WFDbv@12345

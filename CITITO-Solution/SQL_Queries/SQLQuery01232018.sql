@@ -1,0 +1,4 @@
+SELECT d.TR_UID AS [UID], d.TR_ID AS [Record ID], h.PCP_ID AS[Job Code], d.TR_Shipment AS [Shipment], d.TR_File AS [File Name], d.TR_FileSize AS [Output], d.TR_UOM AS [OUM], d.Task_ID AS [Task], d.TR_Status AS [Job Status], d.TR_InDate AS [Task In Time], d.TR_OutDate AS [Task Out Time], d.TR_Hours AS [Task Hours], d.TR_Apporval As [Approval Status], d.TR_ApprovalTime As [Approval Time], d.TR_Productivity AS [Task Productivity] 
+FROM tbl_TaskRecordHeader h INNER JOIN tbl_TaskRecordDetail d ON h.TR_ID = d.TR_ID 
+WHERE d.TR_PIC = 'ZDQ' AND TR_Status='3' AND d.TR_Apporval!=1 AND d.TR_InDate BETWEEN dateadd(month,datediff(month,0,getdate()),0) AND dateadd(day,-1,dateadd(month,datediff(month,-1,getdate()),0))
+ORDER BY d.TR_Index desc
